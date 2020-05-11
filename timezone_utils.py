@@ -7,4 +7,7 @@ class TimeZoneUtils():
 
     # get the time zone using lat and long
     def get_time_zone(self, lat, long):
-        return self.tz_finder.timezone_at(lat=lat, lng=long)
+        try:
+            return self.tz_finder.timezone_at(lat=lat, lng=long)
+        except Exception as e:
+            raise e
