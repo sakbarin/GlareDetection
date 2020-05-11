@@ -11,8 +11,8 @@ api = Api(app)
 # class used for the REST API
 class GlareDetection(Resource):
 
-    # get method
-    def get(self):
+    # method
+    def post(self):
 
         # get input data as json and read required fields
         some_json = request.get_json()
@@ -29,7 +29,7 @@ class GlareDetection(Resource):
         # compute glare and return results
         return ({'glare': coord_utils.detect_glare()})
 
-api.add_resource(GlareDetection, '/')
+api.add_resource(GlareDetection, '/detect_glare')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -22,4 +22,4 @@ The server will start on the address http://127.0.0.1:5000 [if port 5000 is not 
 ### Call REST API
 Open a terminal in Linux and type the following command:<br>
 
-curl -H "Content-Type: application/json" -X GET -d '{"lat": 49.2699648, "long": -123.1290368, "epoch": 1588704959.321, "orientation": -10.2}' http://127.0.0.1:5000/
+curl -H "Content-Type: application/json" -X POST -d '{"lat": 49.2699648, "long": -123.1290368, "epoch": 1588704959.321, "orientation": -10.2}' http://127.0.0.1:5000/detect_glare
