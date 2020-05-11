@@ -58,7 +58,7 @@ class CoordinationUtils():
                 azimuth_distance = phi
 
             # check constraints to find glare
-            if (azimuth_distance <= AZIMUTHAL_DIFF_BOUNDARY and self.altitude <= SUN_ALTITUDE_BOUNDARY):
+            if (azimuth_distance <= AZIMUTHAL_DIFF_BOUNDARY and self.altitude <= SUN_ALTITUDE_BOUNDARY and self.altitude > 0):
                 return True
 
             return False
